@@ -1,0 +1,55 @@
+{
+    "scene_name": "Pause/BRB",
+    "description": "Scène pour les pauses (Be Right Back)",
+    "sources": [
+        {
+            "name": "Fond",
+            "type": "image_source",
+            "settings": {
+                "file": "./assets/background-brb.png"
+            },
+            "position": {
+                "x": 0,
+                "y": 0,
+                "width": 1920,
+                "height": 1080
+            },
+            "order": 1
+        },
+        {
+            "name": "Texte BRB",
+            "type": "text_gdiplus",
+            "settings": {
+                "text": "De retour bientôt!",
+                "font": {
+                    "face": "Arial",
+                    "size": 72,
+                    "bold": true
+                },
+                "color": "#FFFFFF",
+                "outline": true,
+                "outline_color": "#000000",
+                "align": "center"
+            },
+            "position": {
+                "x": 960,
+                "y": 540
+            },
+            "order": 2
+        },
+        {
+            "name": "Musique de fond",
+            "type": "ffmpeg_source",
+            "settings": {
+                "local_file": "./assets/music-loop.mp3",
+                "looping": true,
+                "restart_on_activate": true
+            },
+            "audio_only": true
+        }
+    ],
+    "audio": {
+        "desktop_audio": false,
+        "mic_audio": false
+    }
+}

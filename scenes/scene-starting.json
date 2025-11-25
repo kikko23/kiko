@@ -1,0 +1,108 @@
+{
+    "scene_name": "Démarrage/Starting Soon",
+    "description": "Scène de démarrage avec compte à rebours",
+    "sources": [
+        {
+            "name": "Fond gradient",
+            "type": "color_source",
+            "settings": {
+                "color": "#1a1a2e"
+            },
+            "position": {
+                "x": 0,
+                "y": 0,
+                "width": 1920,
+                "height": 1080
+            },
+            "order": 1
+        },
+        {
+            "name": "Logo",
+            "type": "image_source",
+            "settings": {
+                "file": "./assets/logo.png"
+            },
+            "position": {
+                "x": 810,
+                "y": 200,
+                "width": 300,
+                "height": 300
+            },
+            "order": 2
+        },
+        {
+            "name": "Titre",
+            "type": "text_gdiplus",
+            "settings": {
+                "text": "Le stream commence bientôt...",
+                "font": {
+                    "face": "Arial",
+                    "size": 64,
+                    "bold": true
+                },
+                "color": "#FFFFFF",
+                "outline": true,
+                "outline_color": "#000000",
+                "align": "center"
+            },
+            "position": {
+                "x": 960,
+                "y": 600
+            },
+            "order": 3
+        },
+        {
+            "name": "Compteur",
+            "type": "text_gdiplus",
+            "settings": {
+                "text": "5:00",
+                "font": {
+                    "face": "Arial",
+                    "size": 120,
+                    "bold": true
+                },
+                "color": "#00FF00",
+                "outline": true,
+                "outline_color": "#000000",
+                "align": "center"
+            },
+            "position": {
+                "x": 960,
+                "y": 750
+            },
+            "order": 4,
+            "note": "Utiliser un plugin countdown ou text source avec script"
+        },
+        {
+            "name": "Info stream",
+            "type": "text_gdiplus",
+            "settings": {
+                "text": "Préparez-vous! Le stream va démarrer",
+                "font": {
+                    "face": "Arial",
+                    "size": 32
+                },
+                "color": "#AAAAAA",
+                "align": "center"
+            },
+            "position": {
+                "x": 960,
+                "y": 950
+            },
+            "order": 5
+        },
+        {
+            "name": "Musique d'attente",
+            "type": "ffmpeg_source",
+            "settings": {
+                "local_file": "./assets/music-intro.mp3",
+                "looping": true
+            },
+            "audio_only": true
+        }
+    ],
+    "audio": {
+        "desktop_audio": false,
+        "mic_audio": false
+    }
+}

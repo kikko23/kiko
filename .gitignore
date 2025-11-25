@@ -1,0 +1,63 @@
+# Dossiers de backup
+backups/
+recordings/
+
+# Assets personnels (images, vidéos, musique)
+assets/*
+!assets/.gitkeep
+
+# Fichiers temporaires
+*.tmp
+*.log
+*.swp
+*~
+
+# Fichiers de configuration locaux
+*.local
+
+# Enregistrements et caches
+/tmp/
+*.flv
+*.mp4
+*.mkv
+*.avi
+*.mov
+
+# Logs
+logs/
+*.log
+
+# OS spécifiques
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Éditeurs
+.vscode/
+.idea/
+*.sublime-*
+
+# Python (si scripts Python ajoutés)
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+venv/
+env/
+
+# Node.js (si outils Node ajoutés)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Secrets
+*.key
+*.pem
+credentials.json
+secrets.json
+
+# Dossier de scenes exportées (peut être volumineux)
+scenes/exported/
+
+# Cache Nginx
+/var/cache/nginx/

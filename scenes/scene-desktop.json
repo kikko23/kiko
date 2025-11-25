@@ -1,0 +1,51 @@
+{
+    "scene_name": "Bureau/Desktop",
+    "description": "Scène pour capture d'écran complète avec webcam",
+    "sources": [
+        {
+            "name": "Capture d'écran",
+            "type": "monitor_capture",
+            "settings": {
+                "monitor": 0,
+                "capture_cursor": true
+            },
+            "position": {
+                "x": 0,
+                "y": 0,
+                "width": 1920,
+                "height": 1080
+            },
+            "order": 1
+        },
+        {
+            "name": "Webcam",
+            "type": "dshow_input",
+            "settings": {
+                "video_device_id": "default",
+                "resolution": "1280x720",
+                "fps": 30
+            },
+            "position": {
+                "x": 1520,
+                "y": 780,
+                "width": 384,
+                "height": 216
+            },
+            "order": 2,
+            "filters": [
+                {
+                    "name": "Cadre webcam",
+                    "type": "color_filter",
+                    "settings": {
+                        "color": "#333333",
+                        "opacity": 100
+                    }
+                }
+            ]
+        }
+    ],
+    "audio": {
+        "desktop_audio": true,
+        "mic_audio": true
+    }
+}
